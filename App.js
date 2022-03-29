@@ -10,6 +10,7 @@ import {
 import { ThemeProvider } from "styled-components";
 import theme from "./src/global/styles/theme";
 import AppLoading from "expo-app-loading";
+import Register from "./src/screens/Register";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -22,7 +23,8 @@ export default function App() {
   }
   return (
     <ThemeProvider theme={theme}>
-      <Dashboard />
+      {/* <Dashboard /> */}
+      <Register />
     </ThemeProvider>
   );
 }
