@@ -1,4 +1,5 @@
 import React from "react";
+import { TouchableOpacity } from "react-native";
 import HighLightCard from "../../components/HighlightCard";
 import TrasactionCard, {
   TransactionCardProps,
@@ -74,7 +75,9 @@ export function Dashboard() {
               <UserName>Guilherme</UserName>
             </User>
           </UserInfo>
-          <Icon name="power" />
+          <TouchableOpacity onPress={() => {}}>
+            <Icon name="power" />
+          </TouchableOpacity>
         </UserWrapper>
       </Header>
 
