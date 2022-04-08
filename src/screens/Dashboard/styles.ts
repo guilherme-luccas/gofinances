@@ -80,4 +80,9 @@ export const HighLightCards = styled.ScrollView.attrs({
   ).attrs({
     showsVerticalScrollIndicator: false,
     contentContainerStyle: { paddingBottom: getBottomSpace() },
-  })``;
+  })``,
+  LoadContainer = styled.View`
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  `;

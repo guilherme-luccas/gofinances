@@ -1,6 +1,5 @@
 import React from "react";
-import { StatusBar } from "react-native";
-import { Dashboard } from "./src/screens/Dashboard";
+
 import {
   useFonts,
   Poppins_400Regular,
@@ -12,6 +11,9 @@ import theme from "./src/global/styles/theme";
 import AppLoading from "expo-app-loading";
 
 import AppRoutes from "./src/routes/app.routes";
+
+import "intl";
+import "intl/locale-data/jsonp/pt-BR";
 
 import { NavigationContainer } from "@react-navigation/native";
 
