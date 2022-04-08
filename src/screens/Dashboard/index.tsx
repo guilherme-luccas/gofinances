@@ -123,7 +123,7 @@ export function Dashboard() {
       transactionsParsed,
       "negative"
     );
-
+    const totalInterval = `01 a ${lastExpenseTransaction}`;
     const total = entries - expenses;
     setHighLightData({
       entries: {
@@ -145,7 +145,7 @@ export function Dashboard() {
           style: "currency",
           currency: "BRL",
         }),
-        lastTransaction: "",
+        lastTransaction: totalInterval,
       },
     });
     setLoading(false);
@@ -199,13 +199,13 @@ export function Dashboard() {
               type="down"
               title="Saídas"
               amount={highLightData?.expenses?.amount}
-              lastTransaction={highLightData?.entries?.lastTransaction}
+              lastTransaction={highLightData?.expenses?.lastTransaction}
             />
             <HighLightCard
               type="total"
               title="Total"
               amount={highLightData?.total?.amount}
-              lastTransaction={highLightData?.entries?.lastTransaction}
+              lastTransaction={highLightData?.total?.lastTransaction}
             />
           </HighLightCards>
           <Transactions>
