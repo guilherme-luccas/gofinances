@@ -113,7 +113,6 @@ export default function Register() {
       const response = await AsyncStorage.getItem(dataKey);
 
       const responseParsed = JSON.parse(response!);
-      console.log(responseParsed);
     }
     getData();
   }, []);
