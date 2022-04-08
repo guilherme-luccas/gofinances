@@ -3,6 +3,9 @@ import { RFValue } from "react-native-responsive-fontsize";
 import { FlatList, TouchableOpacity } from "react-native";
 import { Feather } from "@expo/vector-icons";
 
+interface CategoryProps {
+  isActive: boolean;
+}
 export const Container = styled.View`
   flex: 1;
   background-color: ${({ theme }) => theme.colors.background};
@@ -27,10 +30,12 @@ export const List = styled(FlatList)`
   width: 100%;
 `;
 
-export const Category = styled.View`
+export const Category = styled(TouchableOpacity)<CategoryProps>`
   width: 100%;
   padding: ${RFValue(18)}px;
   flex-direction: row;
+  background-color: ${({ theme, isActive }) =>
+    isActive ? theme.colors.secondary_light : theme.colors.background};
 `;
 
 export const Icon = styled(Feather)`
